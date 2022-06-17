@@ -1,2 +1,2 @@
 # kadrovik
-Take frames from IP-camera
+Take frames from video
