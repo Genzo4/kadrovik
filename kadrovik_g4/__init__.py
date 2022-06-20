@@ -3,7 +3,7 @@ import ffmpeg
 
 class Kadrovik:
 
-    def __init__(self, video: str = '', frameN: int = 5, outPath: str = 'frames\\frame_%d.png'):
+    def __init__(self, video: str = '', frameN: int = 5, outPath: str = 'frame_%d.png'):
         """
         :param video: Input video
         :param frameN: Extract frame number
@@ -22,13 +22,13 @@ class Kadrovik:
         """
 
         if video != '':
-            self.video == video
+            self.video = video
         if self.video != '':
             ffmpeg.input(
                 self.video
             ).filter(
                 'select',
-                'not(mod(n,' + self.frameN + '))',
+                'not(mod(n,' + str(self.frameN) + '))',
             ).output(
                 self.outPath,
                 vsync='vfr'
