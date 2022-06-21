@@ -1,2 +1,2 @@
 ffmpeg-python
-utilspy_g4
+utilspy-g4
