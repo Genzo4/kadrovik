@@ -5,5 +5,3 @@ venv
 dist
 build
 *.egg-info
-output.ts
-frames
