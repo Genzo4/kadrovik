@@ -25,7 +25,7 @@ Download and install the package:
 
 ```bash
 $ git clone https://github.com/Genzo4/kadrovik
-$ cd polyfiller
+$ cd kadrovik
 $ pip install -r requirements.txt
 $ pip install .
 ```
