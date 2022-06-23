@@ -52,3 +52,10 @@ def test_3():
         assert compareFrames('tests/frames/frame_%i.png' % i, 'tests/good_frames/frame_%i.png' % i)
 
     _removeTempFiles()
+
+
+def test_print(capsys):
+    kadrovik = Kadrovik(video='test.mp4', frameN=10, outPath='test%d.png')
+    print(kadrovik)
+    captured = capsys.readouterr()
+    assert captured.out == 'test.mp4 => test%d.png (10)\n'
