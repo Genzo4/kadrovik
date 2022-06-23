@@ -61,4 +61,4 @@ class Kadrovik:
 
     def __str__(self):
         """Overrides the default implementation"""
-        return self.video + ' => ' + self.outPath + ' (' + str(self.frameN) + ')'
+        return '%s => %s (%d)' % (self.video, self.outPath, self.frameN)
