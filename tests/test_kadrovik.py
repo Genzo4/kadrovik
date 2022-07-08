@@ -2,7 +2,7 @@ import pytest
 import os
 import glob
 from kadrovik_g4 import Kadrovik
-from utilspy_g4 import compareFrames
+from utilspy_g4 import compareFrames, templatedRemoveFiles
 
 
 def _removeTempFiles() -> None:
@@ -12,10 +12,7 @@ def _removeTempFiles() -> None:
     :return: None
     """
 
-    removeFiles = glob.iglob('tests/frames/*.png')
-
-    for _file in removeFiles:
-        os.remove(_file)
+    templatedRemoveFiles('tests/frames/*.png')
 
 
 def test_1():
