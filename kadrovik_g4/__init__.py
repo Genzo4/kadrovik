@@ -3,16 +3,16 @@ import ffmpeg
 
 class Kadrovik:
 
-    def __init__(self, video: str = '', frameN: int = 5, outPath: str = 'frame_%d.png'):
+    def __init__(self, video: str = '', frame_n: int = 5, out_path: str = 'frame_%d.png'):
         """
         :param video: Input video
-        :param frameN: Extract frame number
-        :param outPath: Path to output frames
+        :param frame_n: Extract frame number
+        :param out_path: Path to output frames
         """
 
         self.video = video
-        self.frameN = frameN
-        self.outPath = outPath
+        self.frame_n = frame_n
+        self.out_path = out_path
 
     def process(self, video: str = ''):
         """
@@ -28,12 +28,12 @@ class Kadrovik:
                 self.video
             ).filter(
                 'select',
-                'not(mod(n,' + str(self.frameN) + '))',
+                'not(mod(n,' + str(self.frame_n) + '))',
             ).output(
-                self.outPath,
+                self.out_path,
                 vsync='vfr'
             ).overwrite_output(
-            ).run(quiet = True)
+            ).run(quiet=True)
 
     @property
     def video(self):
@@ -44,21 +44,21 @@ class Kadrovik:
         self.__video = video
 
     @property
-    def frameN(self):
-        return self.__frameN
+    def frame_n(self):
+        return self.__frame_n
 
-    @frameN.setter
-    def frameN(self, frameN: int):
-        self.__frameN = frameN
+    @frame_n.setter
+    def frame_n(self, frame_n: int):
+        self.__frame_n = frame_n
 
     @property
-    def outPath(self):
-        return self.__outPath
+    def out_path(self):
+        return self.__out_path
 
-    @outPath.setter
-    def outPath(self, outPath: str):
-        self.__outPath = outPath
+    @out_path.setter
+    def out_path(self, out_path: str):
+        self.__out_path = out_path
 
     def __str__(self):
         """Overrides the default implementation"""
-        return '%s => %s (%d)' % (self.video, self.outPath, self.frameN)
+        return '%s => %s (%d)' % (self.video, self.out_path, self.frame_n)
