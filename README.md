@@ -43,13 +43,13 @@ from kadrovik_g4 import Kadrovik
 Create an instance of the Kadrovik. You can specify additional options:
 - video - input video.
   Default value: ''
-- frameN - extract frame number.
+- frame_n - extract frame number.
   Default value: 5
-- outPath - Path to output frames.
+- out_path - Path to output frames.
   Default value: 'frame_%d.png'
 
 ```python
-kadrovik = Kadrovik(frameN = 5, outPath = 'frames/frame_%d.png')
+kadrovik = Kadrovik(frame_n=5, out_path='frames/frame_%d.png')
 ```
 
 - ### Extract frames
@@ -108,13 +108,13 @@ from kadrovik_g4 import Kadrovik
 Создаём экземпляр Kadrovik. Можно указать дополнительные параметры:
 - video - входное видео.
   Значение по умолчанию: ''
-- frameN - номер извлекаемых кадров.
+- frame_n - номер извлекаемых кадров.
   Значение по умолчанию: 5
-- outPath - имя (и путь) извлекаемых кадров. Используется подстановка %d.
+- out_path - имя (и путь) извлекаемых кадров. Используется подстановка %d.
   Значение по умолчанию: 'frame_%d.png'
 
 ```python
-kadrovik = Kadrovik(frameN = 5, outPath = 'frames/frame_%d.png')
+kadrovik = Kadrovik(frame_n=5, out_path='frames/frame_%d.png')
 ```
 
 - ### Извлекаем кадры
