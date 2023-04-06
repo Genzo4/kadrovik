@@ -1,3 +1,4 @@
 pytest
 pytest-sugar
-utilspy-g4>=2.0.1
+utilspy-g4>=2.2.0
+compare_frames_g4

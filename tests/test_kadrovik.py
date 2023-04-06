@@ -1,6 +1,7 @@
 import pytest
 from kadrovik_g4 import Kadrovik
-from utilspy_g4 import compare_frames, templated_remove_files
+from utilspy_g4 import templated_remove_files
+from compare_frames_g4 import compare_frames
 
 
 def _remove_temp_files() -> None:

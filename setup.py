@@ -8,7 +8,7 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
 
 setup(
    name='kadrovik_g4',
-   version='1.1.0',
+   version='1.1.1',
    description='Take frames from video',
    long_description=long_description,
    long_description_content_type='text/markdown',
@@ -26,6 +26,7 @@ setup(
       'Programming Language :: Python :: 3.8',
       'Programming Language :: Python :: 3.9',
       'Programming Language :: Python :: 3.10',
+      'Programming Language :: Python :: 3.11',
       'License :: OSI Approved :: MIT License',
       'Operating System :: OS Independent',
       'Intended Audience :: Developers',
@@ -39,6 +40,6 @@ setup(
    keywords=['kadrovik', 'ffmpeg-python', 'ffmpeg', 'g4'],
    license='MIT',
    packages=['kadrovik_g4'],
-   install_requires=['ffmpeg-python', 'utilspy-g4>=2.0.1'],
+   install_requires=['ffmpeg-python', 'utilspy-g4>=2.2.0', 'compare_frames_g4'],
    python_requires='>=3.6'
 )
